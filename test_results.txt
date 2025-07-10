@@ -1,0 +1,31 @@
+# Firewall Testing Results
+
+Date: 2025-07-10
+System: Ubuntu 20.04 LTS
+
+--- Before Running Script ---
+$ nmap <your-ip>
+22/tcp open ssh
+80/tcp open http
+443/tcp open https
+139/tcp open netbios-ssn
+445/tcp open microsoft-ds
+3306/tcp open mysql
+
+--- After Running Script ---
+$ nmap <your-ip>
+22/tcp open ssh
+80/tcp open http
+443/tcp open https
+All other ports: filtered or closed
+
+--- Service Tests ---
+✅ SSH Connection: Successful
+✅ HTTP (Apache2): Successful
+✅ HTTPS (SSL/TLS site): Successful
+❌ FTP: Blocked
+❌ MySQL: Blocked
+
+--- Log Output (from /var/log/syslog or /var/log/messages) ---
+Jul 10 10:12:56 ubuntu kernel: [UFW BLOCK] IN=eth0 OUT= MAC=...
+Jul 10 10:13:12 ubuntu kernel: [UFW BLOCK] Dropped Packet: IN=eth0 OUT=...
