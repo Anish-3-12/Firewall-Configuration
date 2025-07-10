@@ -22,31 +22,23 @@ Firewall-Project/
 ├── firewall_rules.sh       # Shell script for firewall rules
 ├── README.md               # This file
 ├── test_results.txt        # Testing and verification logs
-└── screenshots/            # Screenshots of results and configurations
 ```
 
 ## 🧾 Instructions
 
 1. **Make the script executable**:
-    ```bash
+    ```
     chmod +x firewall_rules.sh
     ```
 
 2. **Run the script with root privileges**:
-    ```bash
+    ```
     sudo ./firewall_rules.sh
     ```
 
 3. **Test firewall behavior** (see `test_results.txt`).
 
 4. **Optional**: Modify the script to allow or block other ports/services as needed.
-
-## 📸 Screenshots
-
-Add your screenshots of:
-- `iptables -L -v` output
-- Nmap scans before/after running the script
-- SSH, HTTP, HTTPS service tests
 
 ## ✅ Outcome
 
